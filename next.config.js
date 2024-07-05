@@ -1,11 +1,20 @@
-const { i18n } = require("./next-i18next.config");
-const withPWA = require("next-pwa");
-const runtimeCaching = require("next-pwa/cache");
-module.exports = withPWA({
-  pwa: {
-    disable: process.env.NODE_ENV !== "production",
-    dest: "public",
-    runtimeCaching,
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(mp4|webm)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          publicPath: '/_next',
+          name: 'static/media/[name].[hash].[ext]',
+        },
+      },
+    });
+
+    return config;
   },
-  i18n,
-});
+};
+
+module.exports = nextConfig;
