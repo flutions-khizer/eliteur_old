@@ -5,7 +5,7 @@ import { USFlag } from "@components/icons/USFlag";
 import { DEFlag } from "@components/icons/DEFlag";
 import { ESFlag } from "@components/icons/ESFlag";
 export const siteSettings = {
-	name: "ChawkBazar",
+	name: "Eliteur",
 	description:
 		"Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS.",
 	author: {
@@ -15,52 +15,52 @@ export const siteSettings = {
 	},
 	logo: {
 		url: "/assets/images/logo.svg",
-		alt: "ChawkBazar",
+		alt: "Eliteur",
 		href: "/",
-		width: 95,
-		height: 30,
+		width: 150,
+		height: 50,
 	},
 	defaultLanguage: "en",
 	currencyCode: "USD",
 	site_header: {
 		menu: [
-			{
-				id: 1,
-				path: "/",
-				label: "menu-demos",
-				subMenu: [
-					{
-						id: 1,
-						path: "/",
-						label: "menu-modern",
-					},
-					{
-						id: 2,
-						path: "/standard",
-						label: "menu-standard",
-					},
-					{
-						id: 3,
-						path: "/minimal",
-						label: "menu-minimal",
-					},
-					{
-						id: 4,
-						path: "/vintage",
-						label: "menu-vintage",
-					},
-					{
-						id: 5,
-						path: "/classic",
-						label: "menu-classic",
-					},
-					{
-						id: 6,
-						path: "/trendy",
-						label: "menu-trendy",
-					},
-				],
-			},
+			// {
+			// 	id: 1,
+			// 	path: "/",
+			// 	label: "menu-demos",
+			// 	subMenu: [
+			// 		{
+			// 			id: 1,
+			// 			path: "/",
+			// 			label: "menu-modern",
+			// 		},
+			// 		{
+			// 			id: 2,
+			// 			path: "/standard",
+			// 			label: "menu-standard",
+			// 		},
+			// 		{
+			// 			id: 3,
+			// 			path: "/minimal",
+			// 			label: "menu-minimal",
+			// 		},
+			// 		{
+			// 			id: 4,
+			// 			path: "/vintage",
+			// 			label: "menu-vintage",
+			// 		},
+			// 		{
+			// 			id: 5,
+			// 			path: "/classic",
+			// 			label: "menu-classic",
+			// 		},
+			// 		{
+			// 			id: 6,
+			// 			path: "/trendy",
+			// 			label: "menu-trendy",
+			// 		},
+			// 	],
+			// },
 			{
 				id: 2,
 				path: "/search?q=men-wear",

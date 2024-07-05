@@ -20,14 +20,14 @@ const Layout: React.FC = ({ children }) => {
 						content: "width=device-width, initial-scale=1.0",
 					},
 				]}
-				title="ChawkBazar React - React Next E-commerce Template"
-				description="Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS."
-				canonical="https://chawkbazar.vercel.app/"
+				title="Eliteur"
+				description="Elivate your life style with our premium leather products."
+				canonical="https://www.eliteur.com"
 				openGraph={{
-					url: "https://chawkbazar.vercel.app",
-					title: "ChawkBazar React - React Next E-commerce Template",
+					url: "https://www.eliteur.com",
+					title: "Eliteur",
 					description:
-						"Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS.",
+						"Elivate your life style with our premium leather products.",
 					images: [
 						{
 							url: "/assets/images/og-image-01.png",

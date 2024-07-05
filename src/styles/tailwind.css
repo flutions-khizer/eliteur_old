@@ -272,6 +272,6 @@
 }
 
 /* Breadcrumb truncate last child */
-.chawkbazarBreadcrumb li:last-child {
+.eliteurBreadcrumb li:last-child {
 	@apply truncate;
 }
