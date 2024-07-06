@@ -1,22 +1,23 @@
-import Link from "@components/ui/link";
-import SearchIcon from "@components/icons/search-icon";
-import UserIcon from "@components/icons/user-icon";
-import MenuIcon from "@components/icons/menu-icon";
-import HomeIcon from "@components/icons/home-icon";
-import { useUI } from "@contexts/ui.context";
-import { useRouter } from "next/router";
-import { ROUTES } from "@utils/routes";
-import dynamic from "next/dynamic";
-import { Drawer } from "@components/common/drawer/drawer";
-import { getDirection } from "@utils/get-direction";
-const CartButton = dynamic(() => import("@components/cart/cart-button"), {
+import Link from '@components/ui/link';
+import SearchIcon from '@components/icons/search-icon';
+import UserIcon from '@components/icons/user-icon';
+import MenuIcon from '@components/icons/menu-icon';
+import HomeIcon from '@components/icons/home-icon';
+import { useUI } from '@contexts/ui.context';
+import { useRouter } from 'next/router';
+import { ROUTES } from '@utils/routes';
+import dynamic from 'next/dynamic';
+import { Drawer } from '@components/common/drawer/drawer';
+import { getDirection } from '@utils/get-direction';
+import motionProps from '@components/common/drawer/motion';
+const CartButton = dynamic(() => import('@components/cart/cart-button'), {
 	ssr: false,
 });
-const AuthMenu = dynamic(() => import("@components/layout/header/auth-menu"), {
+const AuthMenu = dynamic(() => import('@components/layout/header/auth-menu'), {
 	ssr: false,
 });
 const MobileMenu = dynamic(
-	() => import("@components/layout/header/mobile-menu")
+	() => import('@components/layout/header/mobile-menu')
 );
 
 const BottomNavigation: React.FC = () => {
@@ -24,7 +25,7 @@ const BottomNavigation: React.FC = () => {
 		openSidebar,
 		closeSidebar,
 		displaySidebar,
-		setDrawerView,
+		// setDrawerView,
 		openSearch,
 		openModal,
 		setModalView,
@@ -32,21 +33,20 @@ const BottomNavigation: React.FC = () => {
 	} = useUI();
 
 	function handleLogin() {
-		setModalView("LOGIN_VIEW");
+		setModalView('LOGIN_VIEW');
 		return openModal();
 	}
 	function handleMobileMenu() {
-		setDrawerView("MOBILE_MENU");
 		return openSidebar();
 	}
 
 	const { locale } = useRouter();
 	const dir = getDirection(locale);
-	const contentWrapperCSS = dir === "ltr" ? { left: 0 } : { right: 0 };
+	const contentWrapperCSS = dir === 'ltr' ? { left: 0 } : { right: 0 };
 
 	return (
 		<>
-			<div className="md:hidden fixed z-10 bottom-0 flex items-center justify-between shadow-bottomNavigation text-gray-700 body-font bg-white w-full h-14 sm:h-16 px-4">
+			<div className="lg:hidden fixed z-10 bottom-0 flex items-center justify-between shadow-bottomNavigation text-gray-700 body-font bg-white w-full h-14 sm:h-16 px-4 md:px-8">
 				<button
 					aria-label="Menu"
 					className="menuBtn flex flex-col items-center justify-center flex-shrink-0 outline-none focus:outline-none"
@@ -70,7 +70,7 @@ const BottomNavigation: React.FC = () => {
 					href={ROUTES.ACCOUNT}
 					className="flex-shrink-0"
 					btnProps={{
-						className: "flex-shrink-0 focus:outline-none",
+						className: 'flex-shrink-0 focus:outline-none',
 						children: <UserIcon />,
 						onClick: handleLogin,
 					}}
@@ -78,14 +78,13 @@ const BottomNavigation: React.FC = () => {
 					<UserIcon />
 				</AuthMenu>
 			</div>
+			{/* TODO: need to use just one drawer component */}
 			<Drawer
-				placement={dir === "rtl" ? "right" : "left"}
+				placement={dir === 'rtl' ? 'right' : 'left'}
 				open={displaySidebar}
 				onClose={closeSidebar}
-				handler={false}
-				showMask={true}
-				level={null}
 				contentWrapperStyle={contentWrapperCSS}
+				{...motionProps}
 			>
 				<MobileMenu />
 			</Drawer>

@@ -1,6 +1,6 @@
 // import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
 // import http from "@framework/utils/http";
-import { useMutation } from "react-query";
+import { useMutation } from "@tanstack/react-query";
 
 export interface CheckoutInputType {
   firstName: string;
@@ -13,12 +13,15 @@ export interface CheckoutInputType {
   save: boolean;
   note: string;
 }
+
+
 async function checkout(input: CheckoutInputType) {
   // return http.post(API_ENDPOINTS.ChangeEmail, input);
   return input;
 }
 export const useCheckoutMutation = () => {
-  return useMutation((input: CheckoutInputType) => checkout(input), {
+  return useMutation({
+    mutationFn: (input: CheckoutInputType) => checkout(input),
     onSuccess: (data) => {
       console.log(data, "Checkout success response");
     },

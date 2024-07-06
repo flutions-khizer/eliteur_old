@@ -322,5 +322,87 @@
         "original": "/assets/images/brands/grid/hunter-shoes-bg.jpg"
       }
     }
+  ],
+  "brandsTimer": [
+    {
+      "id": 1,
+      "name": "Nike",
+      "slug": "nike",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/brands/timer/nike.png",
+        "original": "/assets/images/brands/timer/nike.png"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Dior",
+      "slug": "dior",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/brands/timer/dior.png",
+        "original": "/assets/images/brands/timer/dior.png"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Gucci",
+      "slug": "gucci",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/brands/timer/gucci.png",
+        "original": "/assets/images/brands/timer/gucci.png"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Gucci1",
+      "slug": "gucci1",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/brands/timer/gucci1.png",
+        "original": "/assets/images/brands/timer/gucci1.png"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Levis",
+      "slug": "levis",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/brands/timer/levis.png",
+        "original": "/assets/images/brands/timer/levis.png"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Puma",
+      "slug": "puma",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/brands/timer/puma.png",
+        "original": "/assets/images/brands/timer/puma.png"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Zara",
+      "slug": "zara",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/brands/timer/zara.png",
+        "original": "/assets/images/brands/timer/zara.png"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Under Armour",
+      "slug": "under-armour",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/brands/timer/under-armour.png",
+        "original": "/assets/images/brands/timer/under-armour.png"
+      }
+    }
   ]
 }

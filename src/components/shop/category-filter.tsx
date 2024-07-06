@@ -11,6 +11,7 @@ export const CategoryFilter = () => {
 	const { data, isLoading } = useCategoriesQuery({
 		limit: 10,
 	});
+
 	const selectedCategories = query?.category
 		? (query.category as string).split(",")
 		: [];

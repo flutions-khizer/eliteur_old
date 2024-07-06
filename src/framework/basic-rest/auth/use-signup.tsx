@@ -2,7 +2,7 @@ import { useUI } from "@contexts/ui.context";
 // import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
 // import http from "@framework/utils/http";
 import Cookies from "js-cookie";
-import { useMutation } from "react-query";
+import { useMutation } from "@tanstack/react-query";
 
 export interface SignUpInputType {
   email: string;
@@ -17,7 +17,8 @@ async function signUp(input: SignUpInputType) {
 }
 export const useSignUpMutation = () => {
   const { authorize, closeModal } = useUI();
-  return useMutation((input: SignUpInputType) => signUp(input), {
+  return useMutation({
+    mutationFn: (input: SignUpInputType) => signUp(input),
     onSuccess: (data) => {
       Cookies.set("auth_token", data.token);
       authorize();

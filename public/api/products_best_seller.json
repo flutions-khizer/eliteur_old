@@ -4,6 +4,7 @@
     "name": "Nike Black",
     "description": "Casual wear (casual attire or clothing) may be a Western code that’s relaxed, occasional, spontaneous and fitted to everyday use. Casual wear became popular within the Western world",
     "slug": "nike-black",
+    "isNewArrival": true,
     "image": {
       "id": 1,
       "thumbnail": "/assets/images/products/p-1.png",
@@ -31,8 +32,8 @@
         "original": "/assets/images/products/p-1-4.png"
       }
     ],
-    "price": 15.00,
-    "sale_price": 11.00,
+    "price": 15.0,
+    "sale_price": 11.0,
     "variations": [
       {
         "id": 1,
@@ -230,6 +231,7 @@
     "name": "Gucci Carlton UK",
     "description": "Knitted midi A-line dress, has a scoop neck, sleeveless, straight hem",
     "slug": "gucci-carlton-uk",
+    "isNewArrival": true,
     "image": {
       "id": 1,
       "thumbnail": "/assets/images/products/p-8.png",
@@ -259,6 +261,7 @@
     ],
     "price": 19.99,
     "sale_price": 14.99,
+    "quantity": 0,
     "variations": [
       {
         "id": 1,
@@ -371,7 +374,7 @@
       }
     ],
     "price": "",
-    "sale_price": 8.00,
+    "sale_price": 8.0,
     "variations": [
       {
         "id": 1,
@@ -456,6 +459,7 @@
     "name": "12 Eco-Friendly Clothing Brands That",
     "description": "12 Eco-Friendly Clothing Brands That, has a scoop neck, sleeveless, straight hem",
     "slug": "eco-friendly-clothing-brands-that",
+    "isNewArrival": true,
     "image": {
       "id": 1,
       "thumbnail": "/assets/images/products/p-5.png",
@@ -483,8 +487,8 @@
         "original": "/assets/images/products/p-5-4.png"
       }
     ],
-    "price": 28.00,
-    "sale_price": 20.00,
+    "price": 28.0,
+    "sale_price": 20.0,
     "variations": [
       {
         "id": 1,
@@ -596,8 +600,9 @@
         "original": "/assets/images/products/p-6-4.png"
       }
     ],
-    "price": 70.00,
-    "sale_price": 55.00,
+    "price": 70.0,
+    "sale_price": 55.0,
+    "quantity": 0,
     "variations": [
       {
         "id": 1,
@@ -795,6 +800,7 @@
     "name": "Zara Shoes Green",
     "description": "Footwear refers to garments worn on the feet, which originally serves to purpose of protection against adversities of the environment, usually regarding ground textures and temperature.",
     "slug": "zara-shoes-green",
+    "isNewArrival": true,
     "image": {
       "id": 1,
       "thumbnail": "/assets/images/products/p-3.png",
@@ -813,7 +819,7 @@
       }
     ],
     "price": "",
-    "sale_price": 50.00,
+    "sale_price": 50.0,
     "variations": [
       {
         "id": 1,
@@ -925,8 +931,8 @@
         "original": "/assets/images/products/p-9-4.png"
       }
     ],
-    "price": 30.00,
-    "sale_price": 28.00,
+    "price": 30.0,
+    "sale_price": 28.0,
     "variations": [
       {
         "id": 1,
@@ -1011,6 +1017,7 @@
     "name": "NIKE Shoes",
     "description": "NIKE 2020 Black White is a clean and monochromatic colourway of the label’s latest high-technology silhouette. The model first launched late last year and is currently Jordan Brand’s flagship performance pair.",
     "slug": "nike-shoes",
+    "isNewArrival": true,
     "image": {
       "id": 1,
       "thumbnail": "/assets/images/products/p-10.png",
@@ -1030,6 +1037,7 @@
     ],
     "price": "",
     "sale_price": 39.99,
+    "quantity": 0,
     "variations": [
       {
         "id": 1,

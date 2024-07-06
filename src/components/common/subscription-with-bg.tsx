@@ -43,16 +43,16 @@ const SubscriptionWithBg: React.FC<Props> = ({
   }
   return (
     <div
-      className={`${className} relative overflow-hidden flex flex-col sm:items-center lg:items-start rounded-lg bg-gray-200 py-10 md:py-14 lg:py-16`}
+      className={`${className} relative overflow-hidden flex flex-col sm:items-center xl:items-start rounded-lg bg-gray-200 py-10 md:py-14 lg:py-16`}
     >
-      <div className="-mt-1.5 lg:-mt-2 xl:-mt-0.5 text-center xl:text-start mb-7 md:mb-8 lg:mb-9 xl:mb-0">
+      <div className="-mt-1.5 lg:-mt-2 xl:-mt-0.5 text-center ltr:xl:text-left rtl:xl:text-right mb-7 md:mb-8 lg:mb-9 xl:mb-0">
         <Text
           variant="mediumHeading"
           className="mb-2 md:mb-2.5 lg:mb-3 xl:mb-3.5"
         >
           {t(`${title}`)}
         </Text>
-        <p className="text-body text-xs md:text-sm leading-6 md:leading-7">
+        <p className="text-xs leading-6 text-body md:text-sm md:leading-7">
           {t(`${description}`)}
         </p>
       </div>
@@ -61,13 +61,13 @@ const SubscriptionWithBg: React.FC<Props> = ({
         className="flex-shrink-0 w-full sm:w-96 md:w-[545px] md:mt-7 z-10"
         noValidate
       >
-        <div className="flex flex-col sm:flex-row items-start justify-end">
+        <div className="flex flex-col items-start justify-end sm:flex-row">
           <Input
             placeholderKey="forms:placeholder-email-subscribe"
             type="email"
             variant="solid"
             className="w-full"
-            inputClassName="px-4 lg:px-7 h-12 lg:h-14 text-center sm:text-start bg-white"
+            inputClassName="px-4 lg:px-7 h-12 lg:h-14 text-center ltr:sm:text-left rtl:sm:text-right bg-white"
             {...register('subscription_email', {
               required: 'forms:email-required',
               pattern: {
@@ -78,7 +78,7 @@ const SubscriptionWithBg: React.FC<Props> = ({
             })}
             errorKey={errors.subscription_email?.message}
           />
-          <Button className="mt-3 sm:mt-0 w-full sm:w-auto sm:ms-2 md:h-full flex-shrink-0">
+          <Button className="flex-shrink-0 w-full mt-3 sm:mt-0 sm:w-auto ltr:sm:ml-2 rtl:sm:mr-2 md:h-full">
             <span className="lg:py-0.5">{t(`${buttonText}`)}</span>
           </Button>
         </div>

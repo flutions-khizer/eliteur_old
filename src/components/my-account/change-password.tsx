@@ -15,7 +15,7 @@ const defaultValues = {
 };
 
 const ChangePassword: React.FC = () => {
-	const { mutate: changePassword, isLoading } = useChangePasswordMutation();
+	const { mutate: changePassword, isPending } = useChangePasswordMutation();
 
 	const {
 		register,
@@ -67,8 +67,8 @@ const ChangePassword: React.FC = () => {
 						<div className="relative">
 							<Button
 								type="submit"
-								loading={isLoading}
-								disabled={isLoading}
+								loading={isPending}
+								disabled={isPending}
 								className="h-13 mt-3"
 							>
 								{t("common:text-change-password")}

@@ -1,9 +1,8 @@
 import Container from "@components/ui/container";
-import HeroSlider from "@containers/hero-slider-fullwidth";
+import HeroSlider from "@containers/hero-slider";
 import Layout from "@components/layout/layout";
 import { GetStaticProps } from "next";
-import { QueryClient } from "react-query";
-import { dehydrate } from "react-query/hydration";
+import { QueryClient, dehydrate } from "@tanstack/react-query";
 import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
 import { fetchFlashSaleProducts } from "@framework/product/get-all-flash-sale-products";
 import { fetchCategories } from "@framework/category/get-all-categories";
@@ -22,12 +21,13 @@ import SaleBannerWithProducts from "@containers/sale-banner-with-products";
 import BrandGridBlock from "@containers/brand-grid-block";
 import TestimonialCarousel from "@containers/testimonial-carousel";
 import SubscriptionWithBg from "@components/common/subscription-with-bg";
+import { homeSixHeroSlider as banners } from "@framework/static/banner";
 
 export default function Home() {
 	return (
 		<>
 			<Container>
-				<HeroSlider />
+				<HeroSlider data={banners} buttonGroupClassName="hidden" />
 				<SaleBannerGrid />
 				<CategoryBlockIcon sectionHeading="text-featured-categories" />
 				<ProductsFeatured
@@ -63,22 +63,22 @@ Home.Layout = Layout;
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	const queryClient = new QueryClient();
 
-	await queryClient.prefetchQuery(
-		[API_ENDPOINTS.FLASH_SALE_PRODUCTS, { limit: 10 }],
-		fetchFlashSaleProducts
-	);
-	await queryClient.prefetchQuery(
-		[API_ENDPOINTS.CATEGORIES, { limit: 10 }],
-		fetchCategories
-	);
-	await queryClient.prefetchQuery(
-		[API_ENDPOINTS.NEW_ARRIVAL_PRODUCTS, { limit: 10 }],
-		fetchNewArrivalProducts
-	);
-	await queryClient.prefetchQuery(
-		[API_ENDPOINTS.BRANDS, { limit: 0 }],
-		fetchBrands
-	);
+	await queryClient.prefetchQuery({
+		queryKey: [API_ENDPOINTS.FLASH_SALE_PRODUCTS, { limit: 10 }],
+		queryFn: fetchFlashSaleProducts
+	});
+	await queryClient.prefetchQuery({
+		queryKey: [API_ENDPOINTS.CATEGORIES, { limit: 10 }],
+		queryFn: fetchCategories
+	});
+	await queryClient.prefetchQuery({
+		queryKey: [API_ENDPOINTS.NEW_ARRIVAL_PRODUCTS, { limit: 10 }],
+		queryFn: fetchNewArrivalProducts
+	});
+	await queryClient.prefetchQuery({
+		queryKey: [API_ENDPOINTS.BRANDS, { limit: 0 }],
+		queryFn: fetchBrands
+	});
 
 	return {
 		props: {

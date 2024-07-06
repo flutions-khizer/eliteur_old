@@ -26,12 +26,12 @@ export default function Home() {
     <>
       <BannerBlock data={masonryBanner} />
       <Container>
-        <ProductsFlashSaleBlock date={'2023-03-01T01:02:03'} />
+        <ProductsFlashSaleBlock date={'2024-03-01T01:02:03'} />
       </Container>
       <BannerSliderBlock />
       <Container>
         <CategoryBlock sectionHeading="text-shop-by-category" type="rounded" />
-        <ProductsFeatured sectionHeading="text-featured-products" />
+        <ProductsFeatured sectionHeading="text-featured-products" limit={5} />
         <BannerCard
           key={`banner--key${banner[0].id}`}
           banner={banner[0]}
@@ -54,7 +54,7 @@ export default function Home() {
         <DownloadApps />
         <Support />
         <Instagram />
-        <Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
+        <Subscription className="px-5 py-12 bg-opacity-0 sm:px-16 xl:px-0 md:py-14 xl:py-16" />
       </Container>
       <Divider className="mb-0" />
     </>
