@@ -3,7 +3,7 @@ import { getToken } from "./get-token";
 
 const http = axios.create({
   // baseURL: process.env.NEXT_PUBLIC_REST_API_ENDPOINT,
-  baseURL: "http://localhost:3000/api",
+  baseURL: "/api",
   timeout: 30000,
   headers: {
     Accept: "application/json",
